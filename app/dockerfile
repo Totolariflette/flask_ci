@@ -1,0 +1,11 @@
+FROM python:slim
+
+RUN pip install flask
+RUN pip install redis
+
+ADD flaskapp.py .
+ADD test_basics.py .
+
+EXPOSE 80
+
+CMD ["python", "flaskapp.py"]
