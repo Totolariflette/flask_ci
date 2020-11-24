@@ -14,9 +14,9 @@ def counter_incr():
 	try:
 		visits = redis.incr("counter")
 	except:
-		visits = "<i>cannot connect to redis servers</i>"
-    html = "<h1>Number of visits : {}</h1>".format(visits)
-    return html
+		visits = "<i>cannot connect to redis server</i>"
+	html = "<h1>Number of visits: {}</h1>".format(visits)
+	return html
 
 
 if __name__ == "__main__":
